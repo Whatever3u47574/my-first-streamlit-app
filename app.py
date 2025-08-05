@@ -7,7 +7,7 @@ st.title("🧑‍🎓 학생 심리상담 챗봇 (Upstage Solar Pro2)")
 
 # OpenAI 클라이언트 생성 (Upstage Solar Pro2)
 client = OpenAI(
-    api_key="up_fKXAuRAiNDKXo3luhcVTYSm9XHbL3",
+    api_key=st.secrets["UPSTAGE_API_KEY"],
     base_url="https://api.upstage.ai/v1"
 )
 
@@ -52,4 +52,5 @@ if prompt := st.chat_input("상담 내용을 입력해 주세요."):
 
         message_placeholder.markdown(full_response)
         st.session_state.messages.append({"role": "assistant", "content": full_response})
+
 
