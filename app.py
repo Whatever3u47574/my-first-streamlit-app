@@ -52,3 +52,4 @@ if prompt := st.chat_input("상담 내용을 입력해 주세요."):
 
         message_placeholder.markdown(full_response)
         st.session_state.messages.append({"role": "assistant", "content": full_response})
+
